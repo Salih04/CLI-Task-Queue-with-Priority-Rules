@@ -20,6 +20,15 @@ type Task struct {
 	Action       func() error
 }
 
+type TaskState struct {
+	ID           string   `json:"id"` // these are struct tags they tell GO's JSON library what names to use in the JSON file.
+	Name         string   `json:"name"`
+	Priority     string   `json:"priority"`
+	Status       Status   `json:"status"`
+	DependsOn    []string `json:"depends_on"`
+	SkipIfFailed []string `json:"skip_if_failed"`
+}
+
 func (s Status) String() string {
 	switch s {
 	case Pending:
