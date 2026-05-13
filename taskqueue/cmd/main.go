@@ -108,9 +108,9 @@ func main() {
 		wg.Wait()
 	}
 	fmt.Println("\n===== RESULTS =====")
-		for _, t := range allTasks {
-			fmt.Printf(" %s -> %v\n", t.Name, t.Status)
-		}
+	for _, t := range allTasks {
+		fmt.Printf(" %s -> %v\n", t.Name, t.Status)
+	}
 
 	/*
 

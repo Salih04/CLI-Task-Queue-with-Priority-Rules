@@ -25,6 +25,6 @@ func Evaluate(t *task.Task, registry map[string]*task.Task) EvalResult {
 			return EvalResult{CanRun: false}
 		}
 	}
-	return EvalResult{CanRun: true} 
+	return EvalResult{CanRun: true}
 
 }
